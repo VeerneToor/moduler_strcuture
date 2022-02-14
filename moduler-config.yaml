@@ -1,0 +1,27 @@
+prefix_structure: test
+modules:
+  - name: CLEAN
+    structure:
+      - folder: Views
+        sub_folders:
+          - name: Components
+            sufix: Component
+      - folder: Controller
+      - folder: Contract
+        sub_folders:
+          - name: Feature
+          - name: Entity
+      - folder: Provider
+
+    feature:
+      - folder: Views
+        in_subfolder:
+          - Components
+      - folder: Controller
+        sufix: Controller
+      - folder: Contract
+        in_subfolder:
+          - Feature
+          - Entity
+      - folder: Provider
+        sufix: Provider
